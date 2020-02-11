@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+    <head>
+        <meta charset="utf-8"/>
+        <title>FAQ | GrapheneOS</title>
+        <meta name="description" content="Frequently asked questions about GrapheneOS."/>
+        <meta name="theme-color" content="#212121"/>
+        <meta name="msapplication-TileColor" content="#ffffff"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="twitter:site" content="@GrapheneOS"/>
+        <meta name="twitter:creator" content="@GrapheneOS"/>
+        <meta property="og:title" content="GrapheneOS FAQ"/>
+        <meta property="og:description" content="Frequently asked questions about GrapheneOS."/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:image" content="https://grapheneos.org/opengraph.png"/>
+        <meta property="og:image:width" content="512"/>
+        <meta property="og:image:height" content="512"/>
+        <meta property="og:image:alt" content="GrapheneOS logo"/>
+        <meta property="og:url" content="https://grapheneos.org/faq"/>
+        <meta property="og:site_name" content="GrapheneOS"/>
+        <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico"/>
+        <link rel="mask-icon" href="/safari-pinned-tab-icon.svg" color="#000000"/>
+        <link rel="stylesheet" href="/grapheneos.css?13"/>
+        <link rel="manifest" href="/manifest.webmanifest"/>
+        <link rel="canonical" href="https://grapheneos.org/faq"/>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="/">GrapheneOS</a></li>
+                <li><a href="/install">Install</a></li>
+                <li><a href="/build">Build</a></li>
+                <li><a href="/usage">Usage</a></li>
+                <li class="active"><a href="/faq">FAQ</a></li>
+                <li><a href="/releases">Releases</a></li>
+                <li><a href="/source">Source</a></li>
+                <li><a href="/donate">Donate</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="content">
+            <h1 id="faq">
+                <a href="#faq">Frequently Asked Questions</a>
+            </h1>
+
+            <h2 id="table-of-contents">
+                <a href="#table-of-contents">Table of contents</a>
+            </h2>
+                <ul>
+                    <li>
+                        <a href="#day-to-day-usage">Day To Day Usage</a>
+                            <ul>
+                                <li><a href="#is-it-ready">"Is it ready to be used as a daily driver OS?"</a></li>
+                                <li><a href="#update-flashing">"Do I need to unlock the bootloader to update or flash again?"</a></li>
+                                <li><a href="#update-on-wifi-only">"Can I set the update client to only download on WiFi?"</a></li>
+                                <li><a href="#what-apps-included">What does the operating system come with?"</a></li>
+                                <li><a href="#what-apps-will-it-run">"What apps will GrapheneOS run?"</a></li>
+                                <li><a href="#signal">"Will Signal Private Messenger work?"</a></li>
+                                <li><a href="#long-passphrases">"Do you support long passphrases on GrapheneOS as an unlock 
+                                mechanism?"</a></li>
+                                <li><a href="#what-tweaking-needed">"What security tuning or tweaking does GrapheneOS require 
+                                off the bat for security or privacy enhancements?"</h3></li>
+                                <li><a href="#do-you-provide-root">"Do you provide root?"</a></li>
+                                <li><a href="#support-vpns">"Does GrapheneOS support VPNs and VPN apps?"</a></li>
+                                <li><a href="#can-i-use-trezor">"I want to use Trezor with my Phone, will it work?"</a></li>
+                                <li><a href="#can-i-use-yubikeys">"Can I use Yubikeys with GrapheneOS?"</a></li>
+                                <li><a href="#can-i-tether">"Can I use tethering and hotspot?"</a></li>
+                            </ul>
+                    </li>
+                    <li>
+                        <a href="#device-support">Device support</a>
+                            <ul>
+                                <li><a href="#will-you-support-my-device">"Will you support my device?"</a></li>
+                                <li><a href="#will-you-support-pixel-3a">"Will you support the Pixel 3a?</a></li>
+                                <li><a href="#what-will-i-need-before-buying">"What will I need to know before I purchase a 
+                                supported device?"</a></li>
+                            </ul>
+                    </li>
+                    <li>
+                        <a href="#installing-grapheneos">Installing GrapheneOS</a>
+                            <ul>
+                                <li><a href="#yellow-screen">"I've flashed the operating system, and now every time my phone 
+                                boots, it presents me with a yellow screen and warns about my phone having a different 
+                                operating system installed. Why is this?"</a></li>
+                                <li><a href="#orange-warning-screen">I've flashed the operating system, and now every time my 
+                                phone boots, it presents me with an ominous-looking orange screen saying 'software integrity 
+                                not guaranteed.' What's happening?"</a></li>
+                                <li><a href="#how-difficult">"How difficult is the installation?"</a></li>
+                                <li><a href="#how-to-get-adb">"How do I get Android Debug Bridge?"</a></li>
+                                <li><a href="#adb-finding-no-devices">"I'm on Linux. <code>./adb devices</code> it returns 
+                                a warning about no permissions, or Fastboot hangs at <code>Waiting for device</code>. Help!"</a></li>
+                                <li><a href="#installation-hangs">When I type in <code>flash-all</code> it hangs. What is 
+                                happening?"</a></li>
+                            </ul>
+                    </li>
+                </ul>
+            
+            <h2 id="day-to-day-usage">
+                <a href="#day-to-day-usage">Day To Day Usage</a>
+            </h2>
+            
+            <h3 id="is-it-ready">
+                <a href="#is-it-ready">"Is it ready to be used as a daily driver OS?"</a>
+            </h3>
+            <p>Resoundingly yes, Graphene OS is stable and feature-rich enough to be utilized as a daily 
+            driver operating system with only one consideration: an app store (F-Droid, Yalp, Google Play) 
+            is not included by default to allow the user the choice. An app store can be added by simply 
+            downloading, verifying and installing the required .apk.
+            </p> 
+            
+            <h3 id="update-flashing">
+                <a href="#update-flashing">"Do I need to unlock the bootloader to update or flash again?"</a>
+            </h3>
+            <p>No. Your phone will automatically download and install the updates when they are released,
+            provided an internet connection is available. The update images are provided for those who
+            need to download them off of the device for any reason.</p>
+            
+            <p>Updates are digitally signed by Daniel Micay and verified by the device. Unlocking to update 
+            is not needed.</p>
+            
+            <h3 id="update-on-wifi-only">
+                <a href="#update-on-wifi-only">"Can I set the update client to only download on WiFi?"</a>
+            </h3>
+            <p>Yes, under Settings -> System -> Advanced -> System update Settings -> Permitted networks, 
+            set it for unmetered networks only to prevent the update client from using up your cellular data 
+            plan.</p>
+            
+            <h3 id="what-apps-included">
+                <a href="#what-apps-included">What does the operating system come with?"</a>
+            </h3>
+            <p>"Out of the box", the operating system comes with an app for SMS messages and a Phone app, a 
+            search app, Vanadium Browser, Auditor, Mail, Calendar, Photo Gallery, Calculator, Camera, and a 
+            File Browser. More apps can always be installed as desired. </p>
+            
+            <h3 id="what-apps-will-it-run">
+                <a href="#what-apps-will-it-run">"What apps will GrapheneOS run?"</a>
+            </h3>
+            <p>GrapheneOS will run most apps for Android. Most apps from F-Droid will run. GrapheneOS will 
+            run proprietary apps such as Spotify and some banking apps if they are loaded from .apk so long as 
+            they do not have a hard dependency on the absent Google Software Frameworks. </p>
+            
+            <p>Apps that are written unsafely or attempt to violate the security policies that GrapheneOS has put
+            in place will be halted immediately, and a notification that the application has stopped working 
+            displayed to the user.</p>
+            
+            <h3 id="signal">
+                <a href="#signal">"Will Signal Private Messenger work?"</a>
+            </h3>
+            <p>Yes, Signal Private Messenger works great on GrapheneOS.</p> 
+            
+            <h3 id="long-passphrases">
+                <a href="#long-passphrases">"Do you support long passphrases on GrapheneOS as an unlock 
+                mechanism?"</a>
+            </h3>
+            <p>Yes, long passphrases consisting of many dictionary words <i>(using the 
+            <a href="https://xkcd.com/936">"Correct Horse, Battery Staple"</a> approach)</i> work perfectly 
+            fine. The limit is 64 characters.</p>
+            
+            <h3 id="what-tweaking-needed">
+                <a href="#what-tweaking-needed">"What security tuning or tweaking does GrapheneOS require 
+                off the bat for security or privacy enhancements?"</a>
+            </h3>
+            <p>None. GrapheneOS is designed to be secure by default and requires no tweaking nor custom 
+            tuning.</p>
+            
+            <h3 id="do-you-provide-root">
+                <a href="#do-you-provide-root">"Do you provide root?"</a>
+            </h3>
+            <p>No, root is not provided. Root is discouraged in a security-focused environment to minimize 
+            access, privilege, reduce the attack surface of the applications, and reduce the consequences 
+            of user error as much as possible. </p>
+                   
+            <h3 id="support-vpns">
+                <a href="#support-vpns">"Does GrapheneOS support VPNs and VPN apps?"</a>
+            </h3>
+            <p>Yes. Orbot, OpenVPN for Android, the userspace implementation of WireGuard, and the Private 
+            Internet Access VPN app have all been tested and reported working. VPNs can be configured
+            under Settings -> Network & Internet -> Advanced -> VPN.</p>
+            
+            <h3 id="can-i-use-trezor">
+                <a href="#can-i-use-trezor">"I want to use Trezor with my Phone, will it work?"</a>
+            </h3>
+            <p>Yes, Trezor Model Ts are tested and working with GrapheneOS.</p>
+            
+            <h3 id="can-i-use-yubikeys">
+                <a href="#can-i-use-yubikeys">"Can I use Yubikeys with GrapheneOS?"</a>
+            </h3>
+            <p>Yes, Yubikeys are tested and working with both NFC and connected by USB. </p>
+            
+            <h3 id="can-i-tether">
+                <a href="#can-i-tether">"Can I use tethering and hotspot?"</a>
+            </h3>
+            <p>Absolutely. Hotspot and tethering have been tested and work fine. </p>
+            
+            <h2 id="device-support">
+                <a href="#device-support">Device support</a>
+            </h2>
+            
+            <h3 id="will-you-support-my-device">
+                <a href="#will-you-support-my-device">"Will you support my device?"</a>
+           	</h3>           	
+            <p>Support for other devices is planned, but there are a few requirements for full support from 
+            Graphene OS. Rather than aim to try to support many devices, GrapheneOS seeks to support only 
+            the devices with the best security, and focus on specific devices to ensure that the most 
+            attention can be paid to the quality of the code, review, and testing. </p>
+            
+        	<p>A more detailed answer is in the documentation at the entry under 
+        	<a href="https://GrapheneOS.org/#device-support">device support</a>.</p>
+        	
+            <h3 id="will-you-support-pixel-3a">
+                <a href="#will-you-support-pixel-3a">"Will you support the Pixel 3a?</a>
+            </h3>
+            
+            <p><a href="https://GrapheneOS.org/releases#bonito-stable">Yes.</a> The Pixel 3a works fine.</p>
+            
+            <h3 id="what-will-i-need-before-buying">
+                <a href="#what-will-i-need-before-buying">"What will I need to know before I purchase a 
+                supported device?"</a>
+            </h3>
+            
+            <p>Devices purchased for running GrapheneOS should be <i>bootloader</i> unlocked. Devices that 
+            are sold by Verizon are <i>bootloader</i> locked and cannot be unlocked to allow them to be 
+            flashed.</p>
+                       
+            <h2 id="installing-grapheneos">
+                <a href="#installing-grapheneos">Installing GrapheneOS</a>
+            </h2>
+            
+            <h3 id="yellow-screen">
+                <a href="#yellow-screen">"I've flashed the operating system, and now every time my phone 
+                boots, it presents me with a yellow screen and warns about my phone having a different 
+                operating system installed. Why is this?"</a>
+            </h3>
+            <p>This is normal and expected behaviour, as the phone is now running a different operating 
+            system than the factory one installed by the manufacturer. If you see this screen, it is a 
+            <i>good sign,</i> as it indicates that the Android Verified Boot is doing its job to 
+            verify the software, even though it is different than the factory image. </p>
+            
+            <p><a href="https://attestation.app">Device Integrity Monitoring</a> can be used to further attest 
+            to the authenticity of the installed operating system.</a>
+
+            <h3 id="orange-warning-screen">
+                <a href="#orange-warning-screen">I've flashed the operating system, and now every time my 
+                phone boots, it presents me with an ominous-looking orange screen saying 'software integrity 
+                not guaranteed.' What's happening?"</a>
+            </h3>
+            <p>If you see this orange screen, the phone is telling you that the boot loader has been left 
+            unlocked. This allows persistent changes to be written to the operating system at will. 
+            Unlocking the bootloader is one of the steps taken during installation of the operating system, but 
+            it is crucially important that as soon as the installation has been finished, the bootloader is 
+            locked again immediately. Your phone should never be used if your bootloader is unlocked; doing 
+            so switches off Verified Boot.</p>
+
+            <p>Visit the <a href="https://grapheneos.org/install#locking-the-bootloader">installation guide 
+            on locking the bootloader</a> to find out how to fix this issue. </p>
+            
+            <h3 id="how-difficult">
+                <a href="#how-difficult">"How difficult is the installation?"</a>
+            </h3>
+            <p>Full factory images are included complete with the <code>flash-all</code> scripts. A 
+            step-by-step walkthrough is available on <a href="https://grapheneos.org/install">the 
+            install guide.</a> You will need to be familiar with the commandline. </p>
+            
+            <h3 id="how-to-get-adb">
+                <a href="#how-to-get-adb">"How do I get Android Debug Bridge?"</a>
+            </h3>
+            <p>Linux, Mac, and Windows users should always follow the same process and obtain Android Debug
+            Bridge directly from the 
+            <a href="https://developer.android.com/studio/releases/platform-tools.html">official sources.</a>
+            No software needs to be installed, the program simply may be run via the commandline from
+            where it is unzipped to.</p> 
+            
+            <p>Linux users should <i>not</i> utilize the version of Android Debug Bridge packaged by 
+            their distro. Not only are these versions often out of date, but often have their versions 
+            numbered according to the distro, rather than the official source. 
+            <strong>Utilizing an out-of-date version of Fastboot may brick your device.</strong></p>
+            
+            <h3 id="adb-finding-no-devices">
+                <a href="#adb-finding-no-devices">"I'm on Linux. '<code>./adb devices</code>' returns 
+                a warning about no permissions, or Fastboot hangs at '<code>Waiting for device</code>'. Help!"</a>
+            </h3>
+            <p>You will need the correct udev rules to allow adb to communicate with the devices or to run 
+            adb as root. The workflow for adding the correct adb rules for your device will likely be specific 
+            to your distro, so they are not listed here.</p>
+            
+            <h3 id="installation-hangs">
+                <a href="#installation-hangs">When I type in '<code>./flash-all</code>' it hangs. What is 
+                happening?"</a>
+            </h3>
+            <p>Your <code>/tmp</code> partition may be full or too small. Ensure you see the 
+            <a href="https://grapheneos.org/install">installation guide</a>. 
+            
+        </div>
+        <footer>
+            <a href="/"><img src="https://grapheneos.org/logo.png" width="512" height="512" alt=""/>GrapheneOS</a>
+            <ul id="social">
+                <li><a href="https://twitter.com/GrapheneOS">Twitter</a></li>
+                <li><a href="https://github.com/GrapheneOS">GitHub</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>
