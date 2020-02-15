@@ -173,3 +173,11 @@ Many cellphone extraction systems such as GrayKey and Cellebrite mostly involve 
 GrapheneOS allows for passwords of 64 characters, and prefers handsets such as the Pixel 3, which use a separate coprocessor to calculate and release the access tokens to the phone for key derivation. Such implementations offer substantially reduced attack surface reduction and at the present date, no exploits have been publicly documented for them. However, if you consider these exploits to be in your threat model and assume that at a future date one could be discovered, or the HSM in your phone could be delidded and disassembled via the use of lasers and precision robotics, cloned, and then brute force attacks run in parallel (All in all, an extremely targeted attack that could easily end up costing tens of millions of dollars and only work for that particular phone at this point in time), there is an easy defence: utilize the extra security of a long and cryptographically strong passphrase to thwart brute force guessing.
 
 
+## "Does GrapheneOS have any means to prevent apps installed on the phone from sharing information with each other?"
+
+There are multiple levels of isolation. First, each app installed within a given user profile is given its own, individual sandbox which it is confined to. Secondly, each user profile is isolated from the others and isolated by the Linux Kernel. This arrangement ensures that even with multiple user profiles on the phone, apps can't use each other as sidechannels or reach from one user profile to the next. To do so would require breaking the Linux Kernel.
+
+It is possible to get two different apps to interoperate, as is the case with K-9 Mail and OpenKeyChain to allow functionality such as easy sending and recieving of encrypted E-mails. Apps installed into the same profile must both be given permission to interoperate. If this functionality is seen as being undesirable, the apps can be installed into different user profiles, which will make it impossible for them to leak information to each other, or peek into other apps' sandboxes. 
+
+A future goal for GrapheneOS is to expose more of the underlying functionality or improve the user experience around the Android sandboxing system, which could be undertaken when the project has more volunteers.
+
