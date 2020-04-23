@@ -1,4 +1,4 @@
-CTS results on [DEVICE] ([CODENAME]) running [GrapheneOS/FactoryOS/AOSP] [TAG_NUMBER] ([ANDROID_RELEASE_VERSION] with [Chromium/Vanadium] [Chromium/Vanadium Number] [apk_release] as the [Webview and browser/Webview only/browser only]
+CTS results on [DEVICE] ([CODENAME]) running [GrapheneOS/FactoryOS/AOSP] [BUILD_NUMBER] [BETA/STABLE] ([ANDROID_RELEASE_VERSION] with [Chromium/Vanadium] [Chromium/Vanadium Number] [apk_release] as the [Webview and browser/Webview only/browser only]
 
 * CtsAbiOverrideHostTestCases - 
 * CtsAccelerationTestCases - 
