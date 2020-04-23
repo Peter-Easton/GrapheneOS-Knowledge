@@ -54,6 +54,8 @@ Now, you're just about all ready to run the CTS!
 ### Preparing your phone
 Preparing the phone is relatively simple now that you've got the computer set up.
 
+As long as you have ample space to store the CTS media and the bootloader is locked, it's not important what apps or data you have on your phone, so long as you *do **not** disable any of the built-in apps that come with your phone.* This includes the search and camera app. Please leave the default apps enabled.
+
 #### Turning on USB Debugging
 In your phone, open up **Settings ➔ About Phone** and scroll all the way to **Build Number**. Tap on **Build Number** approximately ten times in rapid succession to unlock developer mode.
 
