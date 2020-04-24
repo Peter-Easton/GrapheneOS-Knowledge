@@ -65,7 +65,7 @@ On Linux, you may find that Android Debug Bridge and Fastboot may be failing to 
 $ wget https://raw.githubusercontent.com/M0Rf30/android-udev-rules/master/51-android.rules && sudo cp 51-android.rules /etc/udev/rules.d/51-android.rules && sudo udevadm control --reload-rules
 ```
 
-You will need to add yourself to the `adbusers` usergroup, with `export MY_USERNAME=$(whoami) && sudo usermod -G adbusers $MY_USERNAME`
+If you intend to use your workstation remotely and do your work remotely via SSH, you will need to add yourself to the `adbusers` usergroup, with `export MY_USERNAME=$(whoami) && sudo usermod -G adbusers $MY_USERNAME`
 
 Log off and log back in to ensure the settings take effect.
 
@@ -99,9 +99,13 @@ When shopping around for a workstation, consider the following:
 Graphics cards are not required, as the build process does not involve any input from the Graphics card. This allows debugging and testing builds to be outsourced to a headless build server, or even a cloud service, but this is not something I will get into in this page.
 
 ### The device being developed for
+#### Help! I can't spend $400 on a phone!
+If you can't afford a phone, that's not a dealbreaker. GrapheneOS can be compiled for and run in an emulator on most modern processors with virtualization extensions.
+
+#### If you can afford a phone...
 Although some applications can be run on the emulator, the devices require maintainers and often require significant amounts of per-device work to be done to take advantage of the security features, exploit mitigations, and hardening specific to each device, so access to the device you intend to develop for is not optional, it is a necessity.
 
-### CTS testing rig
+#### CTS testing rig
 When running the Compatibility Test Suite, you should prop the phone up between two objects both the front and rear cameras can focus on simultaneously, as both the front and rear cameras are tested during the camera test cases. A good method is to use a small piece of rubber tape to hold the phone on its side and tape it to something heavy like the bottom of a large saucer or a small pie dish turned upside-down to create a stand, or even making a stand out of something like Lego.
 
 In order for the photo test cases to work, both the front and rear cameras must be able to focus on their targets. A brightly-coloured target with a high amount of contrast is recommended, and it is important to make sure the surfaces of the targets are not reflective or shiny.
