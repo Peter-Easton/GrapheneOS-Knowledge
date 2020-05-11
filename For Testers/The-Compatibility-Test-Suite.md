@@ -213,6 +213,8 @@ Take note that the CTS reports on the are not black and white and are not strict
 
 In this example, while the activity listed as **CtsActivityManagerDeviceTestCases** seems to have passed, it's been listed as "flaky." This could be for a variety of reasons. If you've noticed that after five or more repeated runs, a particular test module is not consistently passing, it's best to call it "flaky" and review in the test results what information seems to recur whenever a test fails.
 
+**Attention!** - There should only be three possible states for a test: **pass** to indicate it's consistently passing, **flaky** to indicate that the test passes some of the time but not others, and **fail** to indicate that the test is consistently failing to pass. This is to allow the reports to be searched via `grep` which makes things easier for the lead developers. Please use these states, then expand on them in notes to allow them to be searched.
+
 ```
 * CtsAutoFillServiceTestCases - 4 failures
     - failure: android.autofillservice.cts.WebViewActivityTest#testAutofillAndSave
