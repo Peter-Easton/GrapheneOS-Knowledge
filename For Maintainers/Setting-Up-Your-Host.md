@@ -4,7 +4,7 @@ Before reading this section I recommend you check out "Your GrapheneOS Shopping 
 This section's only going to cover what you'd need to do to start building. Learning to build the operating system is a fundamental (non-optional) step towards becoming a maintainer, and that's huge. 
 
 ## Installing Arch
-There's only one architecture, and two recommended Linux distributions for building GrapheneOS: Debian 10 Buster, and Arch, both on the x86_64 processor. Building on MacOS and Windows currently isn't supported. The GrapheneOS project recommends Arch for its practice of using as few modifications to software provided to it from its upstream providers and remaining current with upstream. THis causes fewer headaches in the long run. 
+There's only one architecture, and two recommended Linux distributions for building GrapheneOS: Debian 10 Buster, and Arch, both on the x86_64 processor. Building on MacOS and Windows currently isn't supported. The GrapheneOS project recommends Arch for its practice of using as few modifications to software provided to it from its upstream providers and remaining current with upstream. This causes fewer headaches in the long run. 
 
 Installing Arch requires some working knowledge of the commandline to first enter a virtual Live environment with a command shell, set up the disks, networking, download the packages via `pacstrap` and choose items to install. This requires some familiarity with the commandline. The process is extensively documented on the Arch Wiki, and so won't be repeated here, with a few additional hints.
 
@@ -37,7 +37,7 @@ It should be noted that you'll be using Yay to install other packages, you'll ne
 #### First Step
 Install some of the rest of the dependencies
 ```
-sudo pacman -S --needed autoconf automake bc binutils bison ccache dhcpcd fakeroot flex gcc git gperf groff jdk-openjdk jre-openjdk jre-openjdk-headless lib32-gcc-libs lib32-ncurses5-compat-libs libtool libxslt m4 make nano ninja ncurses5-compat-libs net-tools openssh patch perl-switch pkgconf python2-protobuf python2-virtualenv repo rsync schedtool sdl squashfs-tools sudo texinfo unzip wxgtk2 zip
+sudo pacman -S --needed autoconf automake bc binutils bison ccache dhcpcd fakeroot flex gcc git gperf groff jdk-openjdk jre-openjdk jre-openjdk-headless lib32-gcc-libs lib32-ncurses5-compat-libs libtool libxslt m4 make nano ninja ncurses5-compat-libs net-tools nsjail openssh patch perl-switch pkgconf python2-protobuf python2-virtualenv repo rsync schedtool sdl squashfs-tools sudo texinfo unzip wxgtk2 zip
 ```
 
 If you are running with a graphical interface, you may require `lib32-mesa`. Since this tutorial assumes you are building on a detached, headless build server, this likely won't be necessary.
