@@ -37,7 +37,7 @@ It should be noted that you'll be using Yay to install other packages, you'll ne
 #### First Step
 Install some of the rest of the dependencies
 ```
-sudo pacman -S --needed autoconf automake bc binutils bison ccache dhcpcd fakeroot flex gcc git gperf groff jdk-openjdk jre-openjdk jre-openjdk-headless lib32-gcc-libs lib32-ncurses5-compat-libs libtool libxslt m4 make nano ninja ncurses5-compat-libs net-tools nsjail openssh patch perl-switch pkgconf python2-protobuf python2-virtualenv repo rsync schedtool sdl squashfs-tools sudo texinfo unzip wxgtk2 zip
+sudo pacman -S --needed autoconf automake bc binutils bison ccache dhcpcd fakeroot flex gcc git gperf groff jdk-openjdk jre-openjdk jre-openjdk-headless lib32-gcc-libs lib32-ncurses5-compat-libs libtool libxslt m4 make nano ninja ncurses5-compat-libs net-tools nsjail openssh patch perl-switch pkgconf python2-virtualenv repo rsync schedtool sdl squashfs-tools sudo texinfo unzip wxgtk2 zip
 ```
 
 If you are running with a graphical interface, you may require `lib32-mesa`. Since this tutorial assumes you are building on a detached, headless build server, this likely won't be necessary.
@@ -53,7 +53,7 @@ makepkg -si
 ```
 Once that's done, use the following command to fetch the rest of the dependencies. Again, ensure multilib has already been uncommented, or it will fail. 
 ```
-yay -S --needed base-devel multilib-devel gcc repo gperf sdl wxgtk2 squashfs-tools curl ncurses zlib schedtool perl-switch zip unzip libxslt bc rsync ccache lib32-zlib lib32-ncurses lib32-readline ncurses5-compat-libs lib32-ncurses5-compat-libs ttf-ms-fonts
+yay -S --needed base-devel multilib-devel gcc repo gperf sdl wxgtk2 squashfs-tools curl ncurses zlib python2-protobuf schedtool perl-switch zip unzip libxslt bc rsync ccache lib32-zlib lib32-ncurses lib32-readline ncurses5-compat-libs lib32-ncurses5-compat-libs ttf-ms-fonts
 ```
 
 #### Installing the fonts.
