@@ -37,7 +37,7 @@ It should be noted that you'll be using Yay to install other packages, you'll ne
 #### First Step
 Install some of the rest of the dependencies
 ```
-sudo pacman -S --needed autoconf automake bc binutils bison ccache dhcpcd fakeroot flex gcc git gperf groff jdk-openjdk jre-openjdk jre-openjdk-headless lib32-gcc-libs lib32-ncurses5-compat-libs libtool libxslt m4 make nano ninja ncurses5-compat-libs net-tools nsjail openssh patch perl-switch pkgconf python2-virtualenv repo rsync schedtool sdl squashfs-tools sudo texinfo unzip wxgtk2 zip
+sudo pacman -S --needed autoconf automake bc binutils bison ccache dhcpcd fakeroot flex gcc git gperf groff jdk-openjdk jre-openjdk jre-openjdk-headless libtool libxslt m4 make nano ninja net-tools nsjail openssh patch perl-switch pkgconf python2-virtualenv repo rsync schedtool sdl squashfs-tools sudo texinfo unzip wxgtk2 zip
 ```
 
 If you are running with a graphical interface, you may require `lib32-mesa`. Since this tutorial assumes you are building on a detached, headless build server, this likely won't be necessary.
