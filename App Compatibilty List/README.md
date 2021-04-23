@@ -2,6 +2,11 @@
 
 This is a very incomplete list of apps that have been tested on GrapheneOS and what results we get. It will be ever-expanding, so if you find a result that works or doesn't, or disagrees, please contact me and I'll try to fix it.
 
+## Disclaimer
+**An app appearing on any of these lists should not be construed as an endorsement or a recommendation of these apps. These apps are all published by third parties unrelated to GrapheneOS, and have differing practices with respect to how they behave and whether or not they are invasive. This list is simply an ongoing effort to enumerate which apps have been tested and found to work or found not to work on GrapheneOS.**
+
+**Nothing on this list should be taken as final.**
+
 ## Tiers
 
 I've separated the list into a few tiers for easy reading, and this is what they mean:
