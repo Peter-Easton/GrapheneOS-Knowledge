@@ -73,7 +73,6 @@
 * WalletETH
 * Weechat-Android
 * WhatsApp Messenger
-* Wire
 * Wireguard
 # Z
 * Zoom
