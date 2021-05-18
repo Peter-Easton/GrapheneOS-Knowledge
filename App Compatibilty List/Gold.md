@@ -25,6 +25,7 @@
 * Google Maps
 # J
 * Jitsi
+* Joplin
 * Jump Hunter
 # K
 * K-9 Mail
