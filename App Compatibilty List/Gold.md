@@ -73,7 +73,7 @@
 * WalletETH
 * Weechat-Android
 * WhatsApp Messenger
-* Wire
+* Wire (Cannot connect to the server on boot. In order to display notifications you must manually open the app first.)
 * Wireguard
 # Z
 * Zoom
