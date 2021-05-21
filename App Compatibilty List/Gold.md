@@ -10,14 +10,18 @@
 * Bromite
 # D
 * Dicer
+* DAVx<sup>5</sub>
 # E
 * Editor
 * EDS Lite
 * Element
+* Etar
+* ExpressVPN
 # F
 * FairEmail
 * F-Droid
 * Firefox
+* Firefox Focus
 * FreeOTP
 * FreeOTP+
 # G
@@ -46,6 +50,7 @@
 # O
 * OpenKeyChain
 * Orbot
+* Osmand+
 # P
 * PlucklockEX
 * Polandball Can Into Space!
@@ -58,6 +63,7 @@
 * Simple Calendar
 * Simple Gallery
 * Simple Music Player
+* StandardNotes
 * SuperTuxKart
 # T
 * Telegram
