@@ -27,6 +27,8 @@
 # G
 * Google Keyboard
 * Google Maps
+# I
+* Infinity
 # J
 * Jitsi
 * Joplin
