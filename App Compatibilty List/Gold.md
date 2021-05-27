@@ -27,8 +27,11 @@
 # G
 * Google Keyboard
 * Google Maps
+# I
+* Infinity
 # J
 * Jitsi
+* Joplin
 * Jump Hunter
 # K
 * K-9 Mail
