@@ -38,6 +38,7 @@
 * LinPhone
 # M
 * Markor
+* Microsoft Teams
 * Mumla
 * Music Player Go
 * Mullvad VPN
