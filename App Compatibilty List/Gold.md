@@ -1,4 +1,5 @@
 # A
+* Adobe Fill and Sign
 * Aegis
 * Audio Recorder
 * Antox
@@ -8,6 +9,8 @@
 * Briar
 * Briar Debug
 * Bromite
+# C
+* Candy Crush Saga
 # D
 * Dicer
 * DAVx<sup>5</sub>
@@ -25,6 +28,7 @@
 * FreeOTP
 * FreeOTP+
 # G
+* Genius Scan
 * Google Keyboard
 * Google Maps
 # J
