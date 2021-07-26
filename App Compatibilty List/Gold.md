@@ -4,7 +4,7 @@
 * Antox
 * Aurora Store
 # B
-* BankID (shows a notification that Play Services is needed to function, yet it functions perfectly without
+* BankID (shows a notification that Play Services is needed to function, yet it functions perfectly without it)
 * Brave
 * Briar
 * Briar Debug
