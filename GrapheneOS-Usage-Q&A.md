@@ -10,7 +10,7 @@ At this moment, F-Droid is not recommended. This is due to F-Droid having accumu
 Signal Private Messenger. Please either compile the app from source and self-sign your build, or obtain the signed apk available on Signal.org. Signal is working fine and is extensively tested on GrapheneOS.
 
 ## What's the best for taking pictures with GrapheneOS?
-OpenCamera.
+Google Camera, but it requires sandboxed Play Services. Additionally, a new camera app is being developed by GrapheneOS as a replacement of AOSP Camera. OpenCamera can be used if using Play services is not desired.
 
 ## What prevents me from loading a counterfeit application?
 GrapheneOS observes the Android security model of application installation. When an app is first installed, its developer's certificate included in the apk installation bundle is pinned via a trust-on-first-use mechanism, and the app is validated to that particular certificate. Future updates installed to the phone must be signed with the same certificate for the rest of the app's life, and Android will not permit the certificates to be changed as long as the app is installed. Other developers cannot present updates for that given app without them being signed by the key to the certificate that was present at the time of installation. This decentralized signing model is an integral part of the overall Android security model by allowing the infrastructure to be distrusted and not tying the means to authenticate updates to a single set of keys given to a trusted third party, the way Debian's apt system functions.
