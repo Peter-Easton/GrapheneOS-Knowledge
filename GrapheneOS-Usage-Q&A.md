@@ -10,7 +10,7 @@ At this moment, F-Droid is not recommended. This is due to F-Droid having accumu
 Signal Private Messenger. Please either compile the app from source and self-sign your build, or obtain the signed apk available on Signal.org. Signal is working fine and is extensively tested on GrapheneOS.
 
 ## What's the best for taking pictures with GrapheneOS?
-OpenCamera.
+GrapheneOS has its own Camera app which makes use of the latest CameraX libraries in Android. Despite being early release as of November 2021, its image quality is very nearly on par with Google's Camera app and it is very reliable, with support for integrated QR Code Scanning and both still images and video, as well as high definition. More details are included in the official usage guide.
 
 ## What prevents me from loading a counterfeit application?
 GrapheneOS observes the Android security model of application installation. When an app is first installed, its developer's certificate included in the apk installation bundle is pinned via a trust-on-first-use mechanism, and the app is validated to that particular certificate. Future updates installed to the phone must be signed with the same certificate for the rest of the app's life, and Android will not permit the certificates to be changed as long as the app is installed. Other developers cannot present updates for that given app without them being signed by the key to the certificate that was present at the time of installation. This decentralized signing model is an integral part of the overall Android security model by allowing the infrastructure to be distrusted and not tying the means to authenticate updates to a single set of keys given to a trusted third party, the way Debian's apt system functions.
@@ -19,6 +19,8 @@ The question then becomes finding a genuine copy of the first app to install wit
 
 ## Can I have MicroG with signature spoofing?
 No, MicroG is not supported. Signature spoofing is not supported either, due to the pandora's box of attack surface that it presents. You would have dramatically better privacy simply using factory Android with Google in it rather than employ signature spoofing.
+
+GrapheneOS implements compatibility shims which allow Play Services to be optionally installed on a phone running GrapheneOS post-install, run in a per-profile basis case-by-case, at the discretion and under the control of the user in a non-invasive and privacy preserving way that does not allow Play Services to act invasively. A better source for information is the official usage guide here: https://grapheneos.org/usage#sandboxed-play-services
 
 ## I'm getting some issues with alarms functioning. Alarms for reminders aren't going off, or apps aren't displaying notifications properly.
 This is generally encountered on apps from F-Droid and is a problem with the application itself and not GrapheneOS. This behaviour is symptomatic of the app itself been written and compiled for a much older version of the Android API and the functionality it depended on has been depreciated by upstream. This also happens on the factory versions of Android. 
