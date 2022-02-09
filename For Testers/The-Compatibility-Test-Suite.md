@@ -22,32 +22,32 @@ On the software side of things, you're going to need
 Or you can obtain it all at once by running:
 
 ```
-user@computer: ~ $ wget https://dl.google.com/dl/android/cts/android-cts-10_r3-linux_x86-arm.zip https://dl.google.com/dl/android/cts/android-cts-media-1.4.zip https://redirector.gvt1.com/edgedl/android/studio/ide-zips/3.6.3.0/android-studio-ide-192.6392135-linux.tar.gz
+wget https://dl.google.com/dl/android/cts/android-cts-10_r3-linux_x86-arm.zip https://dl.google.com/dl/android/cts/android-cts-media-1.4.zip https://redirector.gvt1.com/edgedl/android/studio/ide-zips/3.6.3.0/android-studio-ide-192.6392135-linux.tar.gz
 ```
 
 ### Setting up
 Android Studio will need to be set up, as the Compatibility Test Suite depends on some software packages included in Android Studio. Simply download the Android Studio and run `studio.sh` in the `bin` directory to get it set up for your system. By default, it will save itself in `$HOME/Android`. You'll want to add this to your command path by running:
 
 ```
-user@computer: ~ $ tar -xf android-studio-ide-192.6392135-linux.tar.gz
-user@computer: ~ $ ./android-studio/bin/studio.sh
+tar -xf android-studio-ide-192.6392135-linux.tar.gz
+./android-studio/bin/studio.sh
 ```
 And following the instructions. By default, it will install to a directory called `Android` in your home directory. Unless you change the defaults, you should be able to add the tools to your command path using the command:
 ```
-user@computer: ~ $ export PATH=$PATH:$HOME/Android/Sdk/platform-tools/:$HOME/Android/Sdk/tools:$HOME/Android/Sdk/tools/bin:$HOME/Android/Sdk/build-tools/29.0.2
+export PATH=$PATH:$HOME/Android/Sdk/platform-tools/:$HOME/Android/Sdk/tools:$HOME/Android/Sdk/tools/bin:$HOME/Android/Sdk/build-tools/29.0.2
 ```
 If you would like this to be done automatically for you after closing the window, run the following:
 ```
-user@computer: ~ $ echo "export PATH=$PATH:$HOME/Android/Sdk/platform-tools/:$HOME/Android/Sdk/tools:$HOME/Android/Sdk/tools/bin:$HOME/Android/Sdk/build-tools/29.0.2" >> ~/.bashrc
+echo "export PATH=$PATH:$HOME/Android/Sdk/platform-tools/:$HOME/Android/Sdk/tools:$HOME/Android/Sdk/tools/bin:$HOME/Android/Sdk/build-tools/32.0.0" >> ~/.bashrc
 ```
 You can then unpack the compatibility test suite to your computer and appending it to your path by running the following:
 ```
-user@computer: ~ $ unzip android-cts-10_r3-linux_x86-arm.zip
-user@computer: ~ $ export PATH=$PATH:$(pwd)/android-cts/tools/:
+unzip android-cts-10_r3-linux_x86-arm.zip
+export PATH=$PATH:$(pwd)/android-cts/tools/:
 ```
 If you'd like to make it persistent, you can run the following command:
 ```
-user@computer: ~ $ echo "export PATH=$PATH:$(pwd)/android-cts/tools/:" >> ~/.bashrc
+echo "export PATH=$PATH:$(pwd)/android-cts/tools/:" >> ~/.bashrc
 ```
 Now, you're just about all ready to run the CTS!
 
@@ -66,7 +66,7 @@ Return to **Settings** and go from **Settings ➔ System ➔ Advanced ➔ Develo
 Connect the phone to your computer by the USB slot and drag down the top notification bar. You may see something that looks like "Charging this device via USB." Tap the bar to bring up the USB Preferences menu, which should have a multiple choice selection from "No data transfer." Set it to "File Transfer." Once you're done, type in:
 
 ```
-user@computer: ~ $ adb devices
+adb devices
 ```
 
 A box may pop up to authorize the identity of the computer plugged into the phone. You will need to approve it before any work can begin. You may see something like:
@@ -84,8 +84,8 @@ The CTS Media is a collection of videos, pictures, and files that the phone will
 
 Simply unzip the CTS Media and run the scripts.
 ```
-user@computer: ~ $ unzip android-cts-media-1.4.zip
-user@computer: ~ $ ./android-cts-media-1.4/copy_images.sh && ./android-cts-media-1.4/copy_media.sh
+unzip android-cts-media-1.4.zip
+./android-cts-media-1.4/copy_images.sh && ./android-cts-media-1.4/copy_media.sh
 ```
 Wait for them to complete. When they're ready, you're able to go ahead with testing.
 
@@ -109,7 +109,7 @@ Prior to testing, you should ensure the phone has a few things set:
 Bring up the CTS with the command:
 
 ```
-user@computer: ~ $ cts-tradefed
+cts-tradefed
 ```
 Which should bring you to the following screen:
 ```
