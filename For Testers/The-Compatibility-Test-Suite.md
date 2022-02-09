@@ -5,7 +5,7 @@
 You're going to need a few things to test GrapheneOS.
 
 ### Hardware
-* An x86 computer running your flavour of Linux. It doesn't have to be powerful, as the phone will do most of the work.
+* An x86-64 computer running your flavour of Linux. It doesn't have to be powerful, as the phone will do most of the work. **32-bit x86 is not supported.**
 * A good-quality USB-A to USB-C cable. **Take Note:** Android takes full advantage of all the features offered by the USB protocol. Many laptops that have USB-C ports, or computer towers that have front ports often do not implement all the features, and Linux kernels that predate 5 may have broken support for USB 3 and 3.1. Many errors are caused by improperly traced or shoddy cables. For best results, always use a high-quality USB-A to C cable plugged directly into the motherboard of your computer.
 * The device you want to test
 * A well-lit area with a way to prop the phone up at least an arm's length away from something it can focus on. A great way to do this is simply using tape to secure the phone to something heavy, such as a wooden block, a small weight, or even a mitten drying rack.
