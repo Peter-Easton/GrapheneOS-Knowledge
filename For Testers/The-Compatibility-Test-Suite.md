@@ -15,26 +15,26 @@ You're going to need a few things to test GrapheneOS.
 
 On the software side of things, you're going to need
 
-* The compatibility test suite software, which is located at: `https://dl.google.com/dl/android/cts/android-cts-10_r3-linux_x86-arm.zip`
-* The compatibility test media, which you can also download at: `https://dl.google.com/dl/android/cts/android-cts-media-1.4.zip`
-* The Android Studio, which is available for download at: `https://developer.android.com/studio/` If you're feeling brave, you can simply download it directly from the mirror at `https://redirector.gvt1.com/edgedl/android/studio/ide-zips/3.6.3.0/android-studio-ide-192.6392135-linux.tar.gz`
+* The compatibility test suite software, which is located at: `https://dl.google.com/dl/android/cts/android-cts-12_r3-linux_x86-arm.zip`
+* The compatibility test media, which you can also download at: `https://dl.google.com/dl/android/cts/android-cts-media-1.5.zip`
+* The Android Studio, which is available for download at: `https://developer.android.com/studio/` If you're feeling brave, you can simply download it directly from the mirror at `https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2021.1.1.21/android-studio-2021.1.1.21-linux.tar.gz`
 
 Or you can obtain it all at once by running:
 
 ```
-wget https://dl.google.com/dl/android/cts/android-cts-10_r3-linux_x86-arm.zip https://dl.google.com/dl/android/cts/android-cts-media-1.4.zip https://redirector.gvt1.com/edgedl/android/studio/ide-zips/3.6.3.0/android-studio-ide-192.6392135-linux.tar.gz
+wget https://dl.google.com/dl/android/cts/android-cts-12_r2-linux_x86-arm.zip https://dl.google.com/dl/android/cts/android-cts-media-1.4.zip https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2021.1.1.21/android-studio-2021.1.1.21-linux.tar.gz
 ```
 
 ### Setting up
 Android Studio will need to be set up, as the Compatibility Test Suite depends on some software packages included in Android Studio. Simply download the Android Studio and run `studio.sh` in the `bin` directory to get it set up for your system. By default, it will save itself in `$HOME/Android`. You'll want to add this to your command path by running:
 
 ```
-tar -xf android-studio-ide-192.6392135-linux.tar.gz
+tar -xf android-studio-2021.1.1.21-linux.tar.gz
 ./android-studio/bin/studio.sh
 ```
 And following the instructions. By default, it will install to a directory called `Android` in your home directory. Unless you change the defaults, you should be able to add the tools to your command path using the command:
 ```
-export PATH=$PATH:$HOME/Android/Sdk/platform-tools/:$HOME/Android/Sdk/tools:$HOME/Android/Sdk/tools/bin:$HOME/Android/Sdk/build-tools/29.0.2
+export PATH=$PATH:$HOME/Android/Sdk/platform-tools/:$HOME/Android/Sdk/tools:$HOME/Android/Sdk/tools/bin:$HOME/Android/Sdk/build-tools/32.0.0
 ```
 If you would like this to be done automatically for you after closing the window, run the following:
 ```
@@ -42,7 +42,7 @@ echo "export PATH=$PATH:$HOME/Android/Sdk/platform-tools/:$HOME/Android/Sdk/tool
 ```
 You can then unpack the compatibility test suite to your computer and appending it to your path by running the following:
 ```
-unzip android-cts-10_r3-linux_x86-arm.zip
+unzip android-cts-12_r2-linux_x86-arm.zip
 export PATH=$PATH:$(pwd)/android-cts/tools/:
 ```
 If you'd like to make it persistent, you can run the following command:
@@ -84,8 +84,8 @@ The CTS Media is a collection of videos, pictures, and files that the phone will
 
 Simply unzip the CTS Media and run the scripts.
 ```
-unzip android-cts-media-1.4.zip
-./android-cts-media-1.4/copy_images.sh && ./android-cts-media-1.4/copy_media.sh
+unzip android-cts-media-1.5.zip
+./android-cts-media-1.5/copy_images.sh && ./android-cts-media-1.5/copy_media.sh
 ```
 Wait for them to complete. When they're ready, you're able to go ahead with testing.
 
@@ -161,7 +161,7 @@ As the National Security Agency has had to learn the hard way, data on its own i
 
 To help the developers, it's best to understand not only what passes or fails, but also more importantly, why something passes or fails. GrapheneOS as an operating system has security and privacy goals that exceed that of the operating system that Google releases, and is willing to make some compromises in terms of performance or even sometimes reverse or backward compatibility when it comes to maintaining security and privacy, and some tests by design are going to end up failing. It would be a waste of time for one of the developers trying to solve a problem to see a test has failed, end up investigating it, and then find out that the "problem" is intentional!
 
-A good example of a report is located here: https://gist.github.com/thestinger/17fe9aeb371a4ceae2aaac2a603f2798 . This report was done for the Pixel 2 running an older version of Android 9 AOSP. As the CTS for Android 9 has changed somewhat, a template constructed from the Android 10 CTS is located in this directory under the filename Android-10-cts-report-template.txt
+A good example of a report is located here: https://gist.github.com/thestinger/17fe9aeb371a4ceae2aaac2a603f2798 . This report was done for the Pixel 2 running an older version of Android 9 AOSP. As the CTS for Android 12 has changed somewhat, a template constructed from the Android 12 CTS is located in this directory under the filename Android-12-cts-report-template.txt
 
 #### Filling out the title
 At the start of the form, you'll notice the title. This is important information in knowing what report corresponds to which device, at which time, with the respective release.
@@ -175,16 +175,22 @@ This should be filled out according to your device.
 |------------|------------|--------------|
 | Pixel      | Sailfish   | Discontinued |
 | Pixel      | Wahoo      | Discontinued |
-| Pixel 2    | Walleye    | Legacy       |
-| Pixel 2XL  | Taimen     | Legacy       |
-| Pixel 3    | Blueline   | Supported    |
-| Pixel 3XL  | Crosshatch | Supported    |
+| Pixel 2    | Walleye    | Discontinued |
+| Pixel 2XL  | Taimen     | Discontinued |
+| Pixel 3    | Blueline   | Legacy       |
+| Pixel 3XL  | Crosshatch | Legacy       |
 | Pixel 3a   | Sargo      | Supported    |
 | Pixel 3aXL | Bonito     | Supported    |
-| Pixel 4    | Flame      | Not planned  |
-| Pixel 4XL  | Coral      | Not planned  |
+| Pixel 4    | Flame      | Supported    |
+| Pixel 4XL  | Coral      | Supported    |
+| Pixel 4a   | Sunfish    | Supported    |
+| Pixel 4a5g | Bramble    | Supported    |
+| Pixel 5    | Redfin     | Supported    |
+| Pixel 5a   | Barbet     | Supported    |
+| Pixel 6    | Oriole     | Supported    |
+| Pixel 6Pro | Raven      | Supported    |
 
-Items marked "Supported" are priority items. Items marked "Legacy" are currently second class and may be discontinued at any moment, but testing on them should be done if they are available. Items marked "Not Planned" are not planned to be supported until the community steps up to substantially contribute toward the active development and long-term sustainability of the project. Items marked "Discontinued" are pop tarts. Like the eponymous toaster pastries, they're useful for providing energy, but have no nutritional value at all.
+Items marked "Supported" are priority items. Items marked "Legacy" are currently second class and may be discontinued at any moment, but testing on them should be done if they are available. tems marked "Discontinued" are pop tarts. Like the eponymous toaster pastries, they're useful for providing energy, but have no nutritional value at all.
 
 ##### Build number
 Your Build number can be found by going to **Settings ➔ About Phone ➔ Build Number**.
