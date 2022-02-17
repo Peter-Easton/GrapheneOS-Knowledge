@@ -85,7 +85,8 @@ The CTS Media is a collection of videos, pictures, and files that the phone will
 Simply unzip the CTS Media and run the scripts.
 ```
 unzip android-cts-media-1.5.zip
-./android-cts-media-1.5/copy_images.sh && ./android-cts-media-1.5/copy_media.sh
+cd android-cts-media-1.5/
+./copy_images.sh && ./copy_media.sh
 ```
 Wait for them to complete. When they're ready, you're able to go ahead with testing.
 
