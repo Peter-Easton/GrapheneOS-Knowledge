@@ -22,7 +22,7 @@ On the software side of things, you're going to need
 Or you can obtain it all at once by running:
 
 ```
-wget https://dl.google.com/dl/android/cts/android-cts-12_r2-linux_x86-arm.zip https://dl.google.com/dl/android/cts/android-cts-media-1.4.zip https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2021.1.1.21/android-studio-2021.1.1.21-linux.tar.gz
+wget https://dl.google.com/dl/android/cts/android-cts-12_r2-linux_x86-arm.zip https://dl.google.com/dl/android/cts/android-cts-media-1.5.zip https://redirector.gvt1.com/edgedl/android/studio/ide-zips/2021.1.1.21/android-studio-2021.1.1.21-linux.tar.gz
 ```
 
 ### Setting up
