@@ -5,10 +5,8 @@ It's just a draft and is some pretty off the top stuff that I've just been putti
 
 Support for other devices is planned, but there are a few requirements for full support from Graphene OS. Rather than aim to try to support many devices, GrapheneOS seeks to support only the devices with the best security, and focus on specific devices to ensure that the most attention can be paid to the quality of the code, review, and testing. A more detailed answer is in the documentation at the entry under device support here: https://GrapheneOS.org/#device-support
 
-
-## "Is it ready to be used as a daily driver? What do you mean 'Not Production Ready?'"
-Resoundingly yes, Graphene OS is stable and feature-rich enough to be utilized as a daily driver operating system. Each release is throughly tested and stable. The base install is fairly minimal, which is why it has been listed as not production ready, since it does not at this moment have an application store with a satisfactory collection of curated and up to date apps ready to be installed. This means that users who wish to use GrapheneOS should know how to properly sideload and the dangers of doing so. 
-
+## "Is it ready to be used as a daily driver?"
+Unconditionally yes.
 
 ## "Why can't GrapheneOS keep supporting devices after they've been EOL'd by Google?"
 
