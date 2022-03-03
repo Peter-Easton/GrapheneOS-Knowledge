@@ -2,7 +2,7 @@
 This has some general questions and answers to GrapheneOS.
 
 ## What app store do you recommend?
-A first-party app store may be in the works in the future, but for now, you will need to find your own. Some users have found luck with Aurora and Yalp. 
+A first-party app store may be in the works in the future, but for now, you will need to find your own. Some users have found luck with Aurora. 
 
 At this moment, F-Droid is not recommended. This is due to F-Droid having accumulated large numbers of apps that are now unmaintained and target much older versions of the Android API all the way back to before Android 6, and not warning the user that the apps are written and compiled for older versions of Android. Obsolete apps that target older versions of the API will almost certainly not run correctly on modern versions of the factory versions of Android or on GrapheneOS. Since developers do not release directly via F-Droid, but rather, F-Droid functions as a trusted third party to deliver the updates and signed builds rather than updates being published directly by the developers, F-Droid has a much slower update cycle, often taking years to update their apps or simply not updating them at all and leaving a large collection of obsolete, old, or abandoned apps in the F-Droid repositories.
 
